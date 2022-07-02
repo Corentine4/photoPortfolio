@@ -1,0 +1,55 @@
+footer{
+    color: color("khaki");
+    margin-bottom: 1rem;
+
+    .contactUsContainer{
+        padding-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        #ContactUs{
+            @include anchor;
+        }
+
+        .socialNetworks{
+            width: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .fontawesomeContainer{
+                height: 2.5rem;
+                width: 2.5rem;
+                border: solid color("khaki") 1px;
+                border-radius: 3rem;
+
+                .fa{
+                    font-size: 1.5rem;
+                    color: color("khaki");
+                }
+
+                .fa-instagram{
+                    padding: 0.35rem 0.5rem;
+                }
+
+                .fa-envelope{
+                    padding: 0.35rem 0.4rem;
+                }
+
+                &:hover{
+                    @include clickAnimation;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .copyright{
+        padding: 0 0 1rem;
+
+        p{
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+$colors: (
+    "dark": #050500,
+    "light": #fff,
+    "khaki": #868356,
+    "khaki30": rgba(134, 131, 86, 0.3),
+    "dark75": rgba(5, 5, 0, 0.75),
+    "dark90": rgba(5, 5, 0, 0.9)
+);
+
+@function color($color){
+    @return map-get($colors, $color);
+}
+
+@mixin anchor{
+    opacity: 0;
+    position: absolute;
+    transform: translateY(-4rem);
+}
+
+@mixin clickAnimation{
+    transform: scale(0.95, 0.95);
+    cursor: pointer;
+}
+
+@mixin littleArrows {
+    border: solid color("light") 1px;
+    width: 2rem;
+    height: 2rem;
+    padding: .4rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    opacity: .25;
+}

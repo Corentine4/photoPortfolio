@@ -1,0 +1,215 @@
+header{
+    height: 100vh;
+
+    #Header{
+        @include anchor;
+    }
+
+    .navscroll{
+        background: color("dark75");
+        height: 6vh;
+    }
+
+    nav{
+        height: 6vh;
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+        display: inline-block;
+        left: 0;
+        top: 0;
+
+        ul{
+            float: right;
+            list-style-type: none;
+            display: flex;
+            height: 100%;
+
+            li{
+                margin: 1rem 2rem;
+                height: 2rem;
+                padding: .3rem 1rem;
+                cursor: pointer;
+                // Css line animation
+                display: inline;
+
+                a{
+                    color: color("light");
+                    text-decoration: none;
+                    position: relative;
+                }
+
+                a::after{
+                    content:"";
+                    display: block;
+                    position: absolute;
+                    width: 0;
+                    left: 0;
+                    height: 1px;
+                    background: color("light");
+                    transition: 0.2s;
+                }
+
+                a:hover:after{
+                    width: 100%;
+                }
+            }
+
+            .divContactUs{
+                background: color("khaki30");
+                border-radius: 1rem;
+                border: solid color("light") 1px;
+
+                &:hover{
+                    @include clickAnimation;
+                    transition: all .3s ease-in-out;
+                }
+
+                // Hide the css line animation
+                a::after{
+                    background: none;
+                }
+            }
+        }
+
+        .burger{
+            display: none;
+        }
+
+        .headerTitle{
+            float: left;
+            font-size: 1.5rem;
+            color: color("light");
+            margin: 1rem 4.5rem;
+            letter-spacing: .3rem;
+            text-decoration: none;
+        }
+    }
+
+    // - Burger menu -
+    @media only screen and (max-width: 992px){
+
+        nav{
+
+            .showNav{
+                width: 100%;
+                display: block;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: all .4s ease-in;
+            }
+
+            ul{
+                width: 0%;
+                height: 100vh;
+                top: 0;
+                right: 0;
+                position: absolute;
+                background: color("dark90");
+                padding: 1rem 0 0 0;
+            }
+
+            button{
+                border: none;
+                background: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                float: right;
+                margin: 1rem 1rem;
+            }
+
+            .burger{
+                display: block;
+                color: color("light");
+                position: relative;
+            }
+        }
+    }
+
+    .headerContainer{
+
+        .bannier{
+            height: 100%;
+            width: 99.9%;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .bannierOverlay{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            width: 25rem;
+            float: right;
+            margin: 35vh 10vh;
+
+            h1{
+                text-align: center;
+                font-size: 3rem;
+                font-weight: 400;
+                font-style: oblique;
+            }
+
+            p{
+                padding: 2rem 1rem;
+                text-align: justify;
+                line-height: 1.5rem;
+            }
+
+            .fontawesomeContainer{
+                width: 3rem;
+                height: 3rem;
+                border: solid color("light") 1px;
+                border-radius: 1.5rem;
+                margin: auto;
+                background: color("khaki30");
+
+                .fas{
+                    padding: 1rem;
+                    color: color("light");
+                }
+
+                &:hover{
+                    @include clickAnimation;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+
+        // ----- Responsive -----
+        @media only screen and (max-width: 576px){
+
+            .bannier{
+                height: 100%;
+                width: 99.9%;
+                object-fit: cover;
+                position: absolute;
+                object-position: 50% 50%;
+            }
+
+            .bannierOverlay{
+
+                margin: 60vh 1rem 0rem 0rem;
+                width: 18rem;
+
+                h1{
+                    font-size: 1.5rem;
+                }
+
+                p{
+                    padding: .5rem 1rem;
+                }
+
+                .fontawesomeContainer{
+                    width: 2rem;
+                    height: 2rem;
+
+                    .fas{
+                        padding: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}

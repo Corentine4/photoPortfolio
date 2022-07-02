@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yacobird</title>
+    <link rel="shortcut icon" type="image/png" href="./images/picture.png"/>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/953d8595bf.js" crossorigin="anonymous"></script>
+    <script src="./javascript/navigation.js" defer></script>
+    <script src="./javascript/animations.js" defer></script>
+    <script src="./javascript/carousel.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#Header" class="headerTitle">Yacobird</a>
+            <ul>
+                <li><a href="#Raptors">Raptors</a></li>
+                <li><a href="#CommonBirds">Common birds</a></li>
+                <li><a href="#Mammals">Mammals</a></li>
+                <li class="divContactUs"><a href="#ContactUs">Contact us</a></li>
+            </ul>
+            <button class="burger"><i class="fas fa-bars"></i></button>
+        </nav>
+        <span id="Header">Anchor Header</span>
+        <div class="headerContainer" id="anchorHeader">
+            <img src="./images/bannier.jpg" alt="Bannier" class="bannier" id="bannierImage">
+            <div class="bannierOverlay">
+                <h1>Yacobird</h1>
+                <p>Hello and welcome to our page ! We are two belgian photographers passionnates about birds and wildlife photography for a few years. Don't hesitate to take a look to our gallery!</p>
+                <div class="fontawesomeContainer">
+                    <a href="#latestPhotos">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="carousel">
+        <span id="latestPhotos">Latest photos</span>
+        <div class="carouselContainer">
+            <h2>Our latest photographs</h2>
+            <div class="changePhoto">
+                <div class="sliderArrowLeft" onclick="previousCarousel();">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+                <img src="./images/EuropeanGreenWoodpecker.jpg" alt="European Green Woodpecker" class="photoCarousel" id="pictureCarousel">
+                <img src="./images/EuropeanGreenWoodpecker2.jpg" alt="European Green Woodpecker" class="photoCarousel" id="pictureCarousel2">
+                <div class="sliderArrowRight" onclick="nextCarousel();">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+            <p>Updated : 29 june 2022</p>
+        </div>
+    </section>
+    <section class="sections">
+        <h2>Gallery</h2>
+        <span id="Raptors">Anchor Raptors</span>
+        <div class="sectionsContainer">
+            <div class="blocks">
+                <div class="blockPart1">
+                    <div class="picture">
+                        <img src="./images/redKite.jpg" alt="Red kite">
+                        <div class="overlayPictures">
+                            <h3>Red kite</h3>
+                            <p>Diurnal raptor, fan of gliding flight. It usually nests in forests on the edge of pastures where it can hunt easily. In flight, it is distinguished from the common buzzard by its kite-shaped tail.</p>
+                            <p class="photoParams">Belgian Ardennes, ISO-2000, f/10, 150mm, 1/1250s </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockPart2">
+                    <div class="picture">
+                        <img src="./images/redKite2.jpg" alt="Red kite">
+                        <div class="overlayPictures">
+                            <h3>Red kite</h3>
+                            <p>Diurnal raptor, fan of gliding flight. It usually nests in forests on the edge of pastures where it can hunt easily. In flight, it is distinguished from the common buzzard by its kite-shaped tail.</p>
+                            <p class="photoParams">Belgian Ardennes, ISO-1600, f/10, 370mm, 1/1250s</p>
+                        </div>
+                    </div>
+                    <div class="picture">
+                        <img src="./images/marshOwl.jpg" alt="Marsh owl">
+                        <div class="overlayPictures">
+                            <h3>Marsh owl</h3>
+                            <p>Owl with little visible egrets. It is mainly present in southern Africa, under the southern hemisphere but some populations nest in northwestern Morocco.</p>
+                            <p class="photoParams">Moulay Bousselham - Morocco, ISO-1200, f/11, 600mm, 1/1600s</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blocks">
+                <div class="blockPart2">
+                    <div class="picture">
+                        <img src="./images/commonBuzzard.jpg" alt="Common buzzard">
+                        <div class="overlayPictures">
+                            <h3>Common buzzard</h3>
+                            <p>One of the most common raptors in Belgium. If you pay attention to it, it is common to see them placed along the highways. Despite its imposing size, it is a very shy bird.</p>
+                            <p class="photoParams">Belgian Ardennes, ISO-1000, f/8, 600mm, 1/1200s</p>
+                        </div>
+                    </div>
+                    <div class="picture">
+                        <img src="./images/greyOwl2.jpg" alt="Grey owl">
+                        <div class="overlayPictures">
+                            <h3>Grey owl</h3>
+                            <p>Nocturnal raptor, it presents an extreme adaptation of hearing to night hunting thanks to its facial mask. The latter directs the sounds to his ears in order to precisely locate his prey.</p>
+                            <p class="photoParams">Marais d'Harchies, ISO-12800, f/6,3, 600mm, 1/30s</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockPart1">
+                    <div class="picture">
+                        <img src="./images/greyOwl.jpg" alt="Grey owl">
+                        <div class="overlayPictures">
+                            <h3>Grey owl</h3>
+                            <p>Nocturnal raptor, it presents an extreme adaptation of hearing to night hunting thanks to its facial mask. The latter directs the sounds to his ears in order to precisely locate his prey.</p>
+                            <p class="photoParams">Liege region, ISO-100, f/10, 390mm, 1/80s</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blocks">
+                <span id="CommonBirds">Anchor Common birds</span>
+                <div class="blockPart1">
+                    <div class="picture">
+                        <img src="./images/commonJay.jpg" alt="Common jay">
+                        <div class="overlayPictures">
+                            <h3>Common jay</h3>
+                            <p>Colorful bird, yet it is a corvid like the magpies and crows. Very fearful, it lives mainly in parks or in the forest although they sometimes feed in garden feeders.</p>
+                            <p class="photoParams">Belgian Ardennes, ISO-160, f/6,3, 460mm, 1/160s</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockPart2">
+                    <div class="picture">
+                        <img src="./images/commonCuckoo.jpg" alt="Common cuckoo">
+                        <div class="overlayPictures">
+                            <h3>Common cuckoo</h3>
+                            <p>During breeding, the cuckoo lays an egg in the nest of another bird species. The latter does not realize anything and will feed the interloper, precocious and greedy, instead of his own offspring. </p>
+                            <p class="photoParams">Marais d'Harchies, ISO-200, f/8, 600mm, 1/320s</p>
+                        </div>
+                    </div>
+                    <div class="picture">
+                        <img src="./images/nothernGannet.jpg" alt="Nothern gannet">
+                        <div class="overlayPictures">
+                            <h3>Nothern gannet</h3>
+                            <p>A large seabird, its hunting technique is spectacular. It spots schools of fish in flight and dives its head first, sometimes more than 30 meters high.</p>
+                            <p class="photoParams">Perros-Guirec - Bretagne, ISO-400, f/5,6, 260mm, 1/2000s</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blocks">
+                <div class="blockPart2">
+                    <div class="picture">
+                        <img src="./images/kingFisher.jpg" alt="King fisher">
+                        <div class="overlayPictures">
+                            <h3>King fisher</h3>
+                            <p>Small, very colorful bird, living and hunting in ponds and streams with low current. During the mating period, the male offers fish to the female to prove that he is able to support a brood.</p>
+                            <p class="photoParams">Namur region, ISO-3200, f/6, 390mm, 1/100s</p>
+                        </div>
+                    </div>
+                    <div class="picture">
+                        <img src="./images/greatSpottedWoodpecker.jpg" alt="Great spotted woodpecker">
+                        <div class="overlayPictures">
+                            <h3>Great spotted woodpecker</h3>
+                            <p>The most common woodpecker. During the summer, its long beak allows it to catch insect larvae in the crevices of tree trunks but also ants in anthills.</p>
+                            <p class="photoParams">Mons region, ISO-6400, f/6,3, 600mm, 1/1000s</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockPart1">
+                    <div class="picture">
+                        <img src="./images/swan.jpg" alt="Swan">
+                        <div class="overlayPictures">
+                            <h3>Swan</h3>
+                            <p>Contrary to popular belief, swans do not form a couple for life. The male can have up to 4 females. When he feels in danger, they utter a particular aggressive cry, resembling a snake whistle.</p>
+                            <p class="photoParams">Marais d'Harchies, ISO-250, f/11, 440mm, 1/500s</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blocks">
+            <span id="Mammals">Anchor Mammals</span>
+                <div class="blockPart1">
+                    <div class="picture">
+                        <img src="./images/squirrel.jpg" alt="Squirrel">
+                        <div class="overlayPictures">
+                            <h3>Squirrel</h3>
+                            <p>A forest rodent, it is the only native squirrel present in Western Europe. When he wears his winter coat, his ears have a visible and characteristic brush of hair.</p>
+                            <p class="photoParams">Belgian Ardennes, ISO-6400, f/6,3, 340mm, 1/200s</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockPart2">
+                    <div class="picture">
+                        <img src="./images/doe.jpg" alt="Doe">
+                        <div class="overlayPictures">
+                            <h3>Doe</h3>
+                            <p>Very present in our forests, it is however difficult to observe. Professional to hide in tall grass, his hearing and smell are highly developed, which allows him to spot humans from afar.</p>
+                            <p class="photoParams">Marais d'Harchies, ISO-18000, f/6,3, 600mm, 1/1000s</p>
+                        </div>
+                    </div>
+                    <div class="picture">
+                        <img src="./images/hare.jpg" alt="Hare">
+                        <div class="overlayPictures">
+                            <h3>Hare</h3>
+                            <p>Its hind legs being very muscular, it is able to run up to 80 km/h and can jump up to 3 meters.</p>
+                            <p class="photoParams">Zeeland - The Netherlands, ISO-1000, f/6,3, 600mm, 1/2000s</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <section class="contactUsContainer">
+            <span id="ContactUs">Anchor Contact us</span>
+            <div class="socialNetworks">
+                <div class="fontawesomeContainer">
+                    <a href="https://www.instagram.com/yacobird/" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="fontawesomeContainer">
+                    <a href="mailto:yacobirding@gmail.com">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="copyright">
+            <p>Copyright 2022 © Yacobird. | All rights reserved</p>
+        </section>
+    </footer>
+</body>
+</html>

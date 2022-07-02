@@ -1,0 +1,225 @@
+// ----- SECTION 1 : carousel -----
+.carousel{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    #latestPhotos{
+        opacity: 0;
+        position: absolute;
+        transform: translateY(-32rem);
+    }
+
+    .carouselContainer{
+        margin: auto;
+        width: 90%;
+
+        h2{
+            color: color("khaki");
+            font-weight: 300;
+            text-align: center;
+            font-style: oblique;
+            font-size: 2rem;
+        }
+
+        .changePhoto{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+
+            .sliderArrowLeft{
+                @include littleArrows;
+                float: left;
+
+                &:hover{
+                    @include clickAnimation;
+                    opacity: 1;
+                    transition: all 1s ease-in-out;
+                }
+            }
+    
+            .sliderArrowRight{
+                @include littleArrows;
+                float: right;
+    
+                &:hover{
+                    @include clickAnimation;
+                    opacity: 1;
+                    transition: all 1s ease-in-out;
+                }
+            }
+
+            .photoCarousel{
+                width: 45%;
+            }
+        }
+
+        // ----- Responsive -----
+        @media only screen and (max-width: 1200px){
+            .changePhoto{
+                // border: solid red 1px;
+                display: flex;
+                flex-direction: column;
+
+                .sliderArrowLeft{
+                    margin-bottom: 1rem;
+                }
+
+                .sliderArrowRight{
+                    margin-top: 1rem;
+                }
+
+                .photoCarousel{
+                    width: 95%;
+                    margin: .25rem 0;
+                }
+            }
+        }
+
+        p{
+            text-align: center;
+            color: color("khaki");
+            font-style: oblique;
+            font-weight: 200;
+        }
+
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1200px){
+    .carousel{
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+
+    .carousel{
+        padding: 10rem 0;
+    }
+
+}
+
+// ----- SECTION 2 : gallery -----
+.sections{
+    padding: 0rem 0rem 10rem;
+
+    #Raptors, #CommonBirds, #Mammals{
+        @include anchor;
+    }
+
+    h2{
+        color: color("khaki");
+        font-weight: 300;
+        text-align: center;
+        font-style: oblique;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .sectionsContainer{
+
+        .blocks{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: .5rem auto;
+
+            .blockPart1{
+                width: 64.9%;
+
+                .picture{
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .blockPart2{
+                width: 34.8%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .picture{
+                    height: 49.5%;
+                    position: relative;
+
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .overlayPictures{
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background: color("dark75");
+                opacity: 0;
+                transition: opacity 0.2s;
+                transition: 1s ease;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-bottom: 2rem;
+
+                h3{
+                    text-align: center;
+                    padding: 1rem 0;
+                    font-size: 1.5rem;
+                    font-style: italic;
+                }
+    
+                p{
+                    text-align: justify;
+                    padding: 0 15%;
+                    line-height: 1.3;
+                    
+                }
+                &:hover{
+                    opacity: 1;
+                }
+                .photoParams{
+                    text-align: center;
+                    font-style: italic;
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        // ----- Responsive -----
+        @media only screen and (max-width: 1200px){
+            .blocks{
+                display: flex;
+                flex-direction: column;
+        
+                .blockPart1{
+                    width: 100%;
+                }
+        
+                .blockPart2{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// ----- Responsive -----
+@media only screen and (max-width: 992px){
+    .sections{
+        padding: 3rem 0rem;
+    }
+}

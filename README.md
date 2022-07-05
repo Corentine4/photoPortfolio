@@ -18,5 +18,12 @@ Passionate about photography for a long time, I created a one page website to sh
 
 ## Demo  
 ![Gif demo](/images/portfolioGif.gif "Demo")
-
+  
 I made the design using Adobe XD. You can click [here](https://xd.adobe.com/view/eb9fb77e-1992-4e37-82db-bb5abf513611-becc/?fullscreen) to find the work model.
+
+## Mobile version
+
+## To do
+- [x] Fix the bug of images not appearing in the slider when loading (works in localhost),
+- [x] Fix the bug : in desktop version the first photo of the gallery does not always load,
+- [x] Implement a contact form

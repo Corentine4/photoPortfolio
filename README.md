@@ -22,6 +22,8 @@ Passionate about photography for a long time, I created a one page website to sh
 I made the design using Adobe XD. You can click [here](https://xd.adobe.com/view/eb9fb77e-1992-4e37-82db-bb5abf513611-becc/?fullscreen) to find the work model.
 
 ## Mobile version
+<img src="/images/mobileVersion1.jpg" width="350" alt="Mobile version"></img>
+<img src="/images/mobileVersion2.jpg" width="350" alt="Mobile version"></img>
 
 ## To do
 - [x] Fix the bug of images not appearing in the slider when loading (works in localhost),

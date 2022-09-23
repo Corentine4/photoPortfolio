@@ -1,6 +1,6 @@
 # photoPortfolio
 
-Passionate about photography for a long time, I created a one page website to show some wildlife photographs of my partner and me. The images are originally in .NEF in the format 5568 x 3712px but i voluntarily reduce it.
+Passionate about photography for a long time, I created a one page website to share some wildlife photographs. The images are originally in .NEF in the format 5568 x 3712px but i voluntarily reduce it.
 
 <div align="center"><img src="images/picture.svg" height="50"></img></div> 
 <div align="center"><a href="https://corentine4.github.io/photoPortfolio/">Deploy</a></div> 

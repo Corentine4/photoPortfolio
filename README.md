@@ -26,6 +26,5 @@ I made the design using Adobe XD. You can click [here](https://xd.adobe.com/view
 <img src="/images/mobileVersion2.jpg" width="350" alt="Mobile version"></img>
 
 ## To do
-- [x] Fix the bug of images not appearing in the slider when loading (works in localhost),
-- [x] Fix the bug : in desktop version the first photo of the gallery does not always load,
-- [x] Implement a contact form
+- [ ] Fix the bug of images not appearing in the slider when loading (works in localhost),
+- [ ] Fix the bug : in desktop version the first photo of the gallery does not always load
